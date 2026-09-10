@@ -65,7 +65,7 @@ function guessGenderVariant(word: string, pos: string): string | undefined {
   const lower = pos.toLowerCase();
   if (!lower.includes('adj') && !lower.includes('adject') && !lower.includes('nom') && !lower.includes('noun')) return undefined;
   const pairs: Record<string,string> = {
-    acteur:'actrice', ami:'amie', ancien:'ancienne', blanc:'blanche', beau:'belle', bon:'bonne', canadien:'canadienne', certain:'certaine', complet:'complète', court:'courte', dernier:'dernière', doux:'douce', entier:'entière', européen:'européenne', étranger:'étrangère', heureux:'heureuse', inquiet:'inquiète', jaloux:'jalouse', long:'longue', mauvais:'mauvaise', national:'nationale', nouveau:'nouvelle', premier:'première', prêt:'prête', sérieux:'sérieuse', sportif:'sportive', vieux:'vieille', voisin:'voisine', vieux:'vieille', gentil:'gentille', gros:'grosse', gros:'grosse', français:'française', japonais:'japonaise', italien:'italienne', espagnol:'espagnole', vietnamien:'vietnamienne'
+    acteur:'actrice', ami:'amie', ancien:'ancienne', blanc:'blanche', beau:'belle', bon:'bonne', canadien:'canadienne', certain:'certaine', complet:'complète', court:'courte', dernier:'dernière', doux:'douce', entier:'entière', européen:'européenne', étranger:'étrangère', heureux:'heureuse', inquiet:'inquiète', jaloux:'jalouse', long:'longue', mauvais:'mauvaise', national:'nationale', nouveau:'nouvelle', premier:'première', prêt:'prête', sérieux:'sérieuse', sportif:'sportive', vieux:'vieille', voisin:'voisine', gentil:'gentille', gros:'grosse', français:'française', japonais:'japonaise', italien:'italienne', espagnol:'espagnole', vietnamien:'vietnamienne'
   };
   if (pairs[word.toLowerCase()]) return `Féminin : ${pairs[word.toLowerCase()]}`;
   if (lower.includes('adj')) {
